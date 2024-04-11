@@ -1,2 +1,2 @@
 # UNI
-All university related projects
+ university related project using html, js and css
