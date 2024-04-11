@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="si294.css"> <!--link to the css style sheet-->
+<script src="si294.js" defer></script> <!--link to the JavaScript file with the defer boolean-->
+</head>
+<body> 
+    <h1>Guessing The Number Game</h1> <!-- heading  with the title of the game-->
+<div class="wrapper"> <!-- starting page wrapper with content inside (begginnning of the game)-->
+   
+    <p>select a range of numbers to guess from</p> <!-- instructions for the player-->
+    <div> <!--division for the radio buttons containning the available ranges to select from-->
+        <label for="range"></label>
+        <label for=10>10</label>
+        <input type="radio" id="10" name="range" value="10" required>
+
+        <label for=100>100</labelfor></label>
+        <input type="radio" id="100" name="range" value="100" required>
+
+        <label for=1000>1000</label>
+        <input type="radio" id="1000" name="range" value="1000" required>
+    </div>
+
+    <div id="start"><!-- div for the start button to bein the game-->
+       <button id="startBtn">start</button>
+    </div>
+
+    <div id="info"><!-- contains information  on the max amount of guesses allowed for each range of the game e.g. Range 10 has 3 max guesses-->
+        <table style= "border: 5ch; width: 50%; margin: auto;">
+        <tr>
+            <th>Range</th>
+            <th>Max no. of guesses</th>
+          
+
+          <tr>
+            <td>10</td>
+            <td>3</td>
+          </tr>
+
+          <tr>
+            <td>100</td>
+            <td>7</td>
+          </tr>
+
+          <tr>
+            <td>1000</td>
+            <td>10</td>
+          </tr>
+        </tr>
+        </table>
+    </div>
+</div>
+
+
+<div class="ten" style="display: none;"><!-- div for guessing range 1-10-->
+    <p>Enter a number between 1 and 10 </p>
+    <div>
+        <input type="text" placeholder="num" id="guess1">
+    </div>
+    <div id="check">
+        <button onclick="play1()" id="my_btn">Check</button>
+        <p id="message1">No. of guesses left: 3</p>
+        <p id="message2">Guessing Record: no guesses</p>
+            <ul id="guessedNumbers3"></ul>
+        <p id="message3"></p>
+         </div>
+    </div>
+</div>
+
+<div class="hundred" style="display: none;"><!-- div for guessing range 1-100-->
+    <p>Enter a number between 1 and 100</p>
+    <div>
+        <input type="text" placeholder="num" id="guess2">
+        <br>
+        <button onclick="play2()" id="my_btn1">Check</button>
+        <p id="message1_1">No. of guesses left: 7</p>
+        <p id="message2_1">Guessing Record: no guesses</p>
+        <p id="message3_1"></p>
+    </div>
+</div>
+
+</div>
+
+<div class="thousand" style="display: none;"> <!-- div for guessing range 1-1000-->
+    <p>Enter a number between 1 and 1000</p>
+    <div>
+        <input type="text" placeholder="num" id="guess3">
+        <br>
+        <button onclick="play3()" id="my_btn2">Check</button>
+        <p id="message1_2">No. of guesses left : 10</p>
+        <p id="message2_2">Guessing Record: no guesses</p>
+        <p id="message3_2"></p>
+    </div>
+</div>
+
+<div id="gameOver" class="gameEnd"> <!--div for the game over message -->
+    <div class="contents">  <!-- contains content for the game over modal alert-->
+        <p id="gameOverMessage"></p>  <!-- game over message -->
+        <button id="playAgain" style="color: white;">Play again</button>
+    </div>
+</div>
+</body>
+<!-- end of body's content-->
+</html>
